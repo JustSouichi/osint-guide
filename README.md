@@ -49,6 +49,38 @@ This guide provides a **step-by-step approach** to OSINT, covering **essential t
 ✅ [Yandex Images](https://yandex.com/images/) – Often finds better results than Google.  
 ✅ [PimEyes](https://pimeyes.com) – Facial recognition tool.  
 
+📸 Metadata Extraction (ExifTool)
+
+ExifTool is a powerful command-line tool for extracting metadata from files, especially images. It can reveal details such as camera make and model, GPS coordinates, timestamps, and software used for editing.
+🔧 Install ExifTool (Linux/macOS)
+
+sudo apt install exiftool  # Debian-based (Ubuntu, Kali)
+brew install exiftool       # macOS (Homebrew)
+
+🔧 Install ExifTool (Windows)
+
+    Download ExifTool from ExifTool Official Site.
+    Extract the archive and rename exiftool(-k).exe to exiftool.exe.
+    Move exiftool.exe to C:\Windows for easy access via the command line.
+
+🛠️ Extract Metadata from an Image
+
+exiftool image.jpg
+
+📌 Example Output
+
+File Name: image.jpg
+File Size: 2.3 MB
+Make: Canon
+Model: EOS 5D Mark III
+Date/Time Original: 2024:02:06 12:34:56
+GPS Latitude: 40.7128 N
+GPS Longitude: 74.0060 W
+Software: Adobe Photoshop
+
+📌 Use Case: If an image contains GPS coordinates, you can map them using Google Maps:
+👉 Open https://www.google.com/maps?q=40.7128,-74.0060
+
 📲 **Social Media OSINT**  
 ✅ [WhatsMyName](https://whatsmyname.app) – Find usernames across platforms.  
 ✅ [Namechk](https://namechk.com) – Check username availability.  
